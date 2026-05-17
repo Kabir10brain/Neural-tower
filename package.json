@@ -15,10 +15,8 @@
       "icon": "icon.ico"
     }
   },
-    
-  },
   "devDependencies": {
     "electron": "^31.0.0",
     "electron-builder": "^24.13.3"
   }
-
+}
