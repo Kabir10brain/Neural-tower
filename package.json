@@ -12,7 +12,8 @@
     "productName": "Neural Tower",
     "win": {
       "target": ["msix"],
-      "icon": "icon.ico"
+      "icon": "icon.ico",
+      "packageAsWithmsix": false
     }
   },
   "devDependencies": {
