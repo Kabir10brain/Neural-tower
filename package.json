@@ -1,40 +1,34 @@
-{
-  "name": "neural-tower",
-  "version": "1.0.0",
-  "description": "Neural Tower productivity app",
-  "main": "main.js",
-  "author": "Kabir",
-  "license": "MIT",
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-builder --win appx"
-  },
-  "devDependencies": {
-    "electron": "^30.0.0",
-    "electron-builder": "^24.13.3"
-  },
-  "build": {
-    "appId": "com.kabir.neuraltower",
-    "productName": "Neural Tower",
-    "directories": {
-      "output": "dist"
-    },
-    "files": [
-      "**/*"
-    ],
-    "win": {
-      "target": [
-        "appx"
-      ],
-      "icon": "icon.ico"
-    },
-    "appx": {
-      "applicationId": "NeuralTower",
-      "displayName": "Neural Tower",
-      "publisher": "CN=Kabir",
-      "publisherDisplayName": "Kabir",
-      "identityName": "Kabir.NeuralTower",
-      "backgroundColor": "#000000"
-    }
-  }
-}
+name: Build Windows App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build APPX
+        run: npx electron-builder --win appx
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Neural-Tower-APPX
+          path: dist/*.appx
