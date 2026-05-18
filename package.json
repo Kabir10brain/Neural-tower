@@ -4,6 +4,7 @@
   "description": "Neural Tower productivity app",
   "main": "main.js",
   "author": "Kabir",
+  "license": "MIT",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder --win portable"
@@ -25,12 +26,7 @@
     ],
     "win": {
       "target": [
-        {
-          "target": "portable",
-          "arch": [
-            "x64"
-          ]
-        }
+        "portable"
       ],
       "icon": "icon.ico"
     },
