@@ -1,31 +1,24 @@
-name: Build Neural Tower
+name: Build Windows MSIX
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  build-windows:
+  build:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install Dependencies
-        run: npm install
+      - run: npm install
 
-      - name: Build Windows App
-        run: npx electron-builder --win portable
+      - run: npx electron-builder --win msix
 
-      - name: Upload EXE
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: NeuralTower-Windows
-          path: dist/*.exe
+          name: NeuralTower-MSIX
+          path: dist/*
