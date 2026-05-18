@@ -22,13 +22,13 @@
       "!node_modules/**/*"
     ],
     "win": {
-      "target": ["appx"]
+      "target": ["appx"],
+      "publisherName": ["Kabir Co."]
     },
     "appx": {
       "applicationId": "NeuralTower",
       "displayName": "Neural Tower",
       "identityName": "KabirCo",
-      "publisher": "CN=\"Kabir Co.\"",
       "publisherDisplayName": "Kabir Co."
     }
   }
