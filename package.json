@@ -1,26 +1,41 @@
-"build": {
-  "appId": "com.kabir.neuraltower",
-  "productName": "Neural Tower",
-  "directories": {
-    "output": "dist"
+{
+  "name": "neural-tower",
+  "version": "1.0.0",
+  "description": "Neural Tower productivity app",
+  "main": "main.js",
+  "author": "Kabir",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable"
   },
-  "files": [
-    "**/*",
-    "!dist/**/*",
-    "!node_modules/.cache/**/*"
-  ],
-  "win": {
-    "target": [
-      {
-        "target": "portable",
-        "arch": [
-          "x64"
-        ]
-      }
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.kabir.neuraltower",
+    "productName": "Neural Tower",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist/**/*",
+      "!node_modules/.cache/**/*"
     ],
-    "icon": "icon.ico"
-  },
-  "portable": {
-    "artifactName": "Neural-Tower-Portable.exe"
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon.ico"
+    },
+    "portable": {
+      "artifactName": "Neural-Tower-Portable.exe"
+    }
   }
 }
