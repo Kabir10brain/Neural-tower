@@ -27,8 +27,8 @@
     "appx": {
       "applicationId": "NeuralTower",
       "displayName": "Neural Tower",
-      "identityName": "KabirCo.",
-      "publisher": "CN=Kabir Co.",
+      "identityName": "KabirCo",
+      "publisher": "CN=\"Kabir Co.\"",
       "publisherDisplayName": "Kabir Co."
     }
   }
