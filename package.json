@@ -1,37 +1,44 @@
 {
-  "name": "neural-tower",
+  "name": "NeuralTower",
   "version": "1.0.0",
   "description": "Neural Tower productivity app",
   "main": "main.js",
   "author": "Kabir",
   "license": "MIT",
+
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --win portable"
+    "build": "electron-builder --win appx"
   },
+
   "devDependencies": {
     "electron": "^30.0.0",
     "electron-builder": "^24.13.3"
   },
+
   "build": {
-    "appId": "com.kabir.neuraltower",
+    "appId": "com.kabir.NeuralTower",
     "productName": "Neural Tower",
+
     "directories": {
       "output": "dist"
     },
+
     "files": [
-      "**/*",
-      "!dist/**/*",
-      "!node_modules/.cache/**/*"
+      "**/*"
     ],
+
     "win": {
-      "target": [
-        "portable"
-      ],
-      "icon": "icon.ico"
+      "target": "appx"
     },
-    "portable": {
-      "artifactName": "Neural-Tower-Portable.exe"
+
+    "appx": {
+      "applicationId": "NeuralTower",
+      "displayName": "Neural Tower",
+      "identityName": "Kabir.NeuralTower",
+      "publisher": "CN=Kabir",
+      "publisherDisplayName": "Kabir",
+      "backgroundColor": "#000000"
     }
   }
 }
