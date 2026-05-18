@@ -1,21 +1,32 @@
 {
   "name": "neural-tower",
   "version": "1.0.0",
-  "description": "Neural Tower HUD",
+  "author": "Kabir",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder"
+    "dist": "electron-builder --win msix"
   },
   "build": {
-    "appId": "com.neuraltower.hud",
+    "appId": "com.kabir.neuraltower",
     "productName": "Neural Tower",
+
+    "directories": {
+      "output": "dist"
+    },
+
     "win": {
-      "target": ["msix"],
-      "icon": "icon.ico",
-      "packageAsWithmsix": false
+      "target": "msix"
+    },
+
+    "msix": {
+      "identityName": "Kabir.NeuralTower",
+      "publisher": "CN=Kabir",
+      "displayName": "Neural Tower",
+      "backgroundColor": "#020617"
     }
   },
+
   "devDependencies": {
     "electron": "^31.0.0",
     "electron-builder": "^24.13.3"
