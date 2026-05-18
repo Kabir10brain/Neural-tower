@@ -25,8 +25,8 @@
       ]
     },
     "appx": {
-      "identityName": "KabirCo.NeuralTower",
-      "publisher": "CN=YOUR-MICROSOFT-PUBLISHER-ID-HERE",
+      "identityName": "FEEDO.NeuralTower",
+      "publisher": "CN=03AA572C-B86F-4A0F-8A63-C4136E865609",
       "publisherDisplayName": "Kabir Co.",
       "applicationId": "NeuralTower",
       "displayName": "Neural Tower"
