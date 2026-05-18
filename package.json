@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --win portable"
+    "build": "electron-builder --win appx"
   },
   "devDependencies": {
     "electron": "^30.0.0",
@@ -20,18 +20,21 @@
       "output": "dist"
     },
     "files": [
-      "**/*",
-      "!dist/**/*",
-      "!node_modules/.cache/**/*"
+      "**/*"
     ],
     "win": {
       "target": [
-        "portable"
+        "appx"
       ],
       "icon": "icon.ico"
     },
-    "portable": {
-      "artifactName": "Neural-Tower-Portable.exe"
+    "appx": {
+      "applicationId": "NeuralTower",
+      "displayName": "Neural Tower",
+      "publisher": "CN=Kabir",
+      "publisherDisplayName": "Kabir",
+      "identityName": "Kabir.NeuralTower",
+      "backgroundColor": "#000000"
     }
   }
 }
