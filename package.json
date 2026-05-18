@@ -5,40 +5,33 @@
   "main": "main.js",
   "author": "Kabir Co",
   "license": "MIT",
-
   "scripts": {
     "start": "electron .",
     "build": "electron-builder --win appx"
   },
-
   "devDependencies": {
     "electron": "^30.0.0",
     "electron-builder": "^24.13.3"
   },
-
   "build": {
-    "appId": "com.kabir.NeuralTower",
-    "productName": "Neural Tower",
-
-    "directories": {
-      "output": "dist"
-    },
-
+    "appId": "com.yourdomain.neuraltower",
     "files": [
-      "**/*"
+      "main.js",
+      "package.json",
+      "dist/**/*",
+      "!node_modules/**/*"
     ],
-
     "win": {
-      "target": "appx"
+      "target": ["appx"]
     },
-
     "appx": {
       "applicationId": "NeuralTower",
       "displayName": "Neural Tower",
       "identityName": "Kabir.NeuralTower",
       "publisher": "CN=Kabir",
       "publisherDisplayName": "Kabir",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#000000",
+      "architecture": "x64"
     }
   }
 }
