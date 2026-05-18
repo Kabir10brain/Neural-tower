@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Neural Tower productivity app",
   "main": "main.js",
-  "author": "Kabir Co",
+  "author": "Kabir Co.",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
@@ -27,10 +27,9 @@
     "appx": {
       "applicationId": "NeuralTower",
       "displayName": "Neural Tower",
-      "identityName": "Kabir.NeuralTower",
-      "publisher": "CN=Kabir",
-      "publisherDisplayName": "Kabir Co",
-      "backgroundColor": "#000000"
+      "identityName": "KabirCo.",
+      "publisher": "CN=Kabir Co.",
+      "publisherDisplayName": "Kabir Co."
     }
   }
 }
