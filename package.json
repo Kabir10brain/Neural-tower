@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --win appx"
+    "build": "electron-builder --win appx --x64"
   },
   "devDependencies": {
     "electron": "^30.0.0",
@@ -29,9 +29,8 @@
       "displayName": "Neural Tower",
       "identityName": "Kabir.NeuralTower",
       "publisher": "CN=Kabir",
-      "publisherDisplayName": "Kabir",
-      "backgroundColor": "#000000",
-      "architecture": "x64"
+      "publisherDisplayName": "Kabir Co",
+      "backgroundColor": "#000000"
     }
   }
 }
