@@ -23,7 +23,7 @@
       "target": [
         "appx"
       ],
-      "icon": "build/icon.ico"
+      "icon": "icon.ico"
     },
     "appx": {
       "identityName": "FEEDO.NeuralTower",
